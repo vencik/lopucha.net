@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+
+\name{V\'{a}clav Krpec} % Your name
+\address{K\v{r}i\v{z}atky 9 \\ Kr\'{a}l\r{u}v Dv\r{u}r 26701 \\ Czech Republic} % Your address
+\address{(+420)~$\cdot$~777~$\cdot$~597~849 \\ vencik@razdva.cz} % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Faculty of Informatics, Masaryk University in Brno} \hfill {\em June 2003} \\ 
+Masters degree in the field of Informatics \\
+Specialisation: Numeric and Parallel Computing \\
+Particular interrests:
+\item Theory of Formal Languages and Automata
+\item Construction of compilers and interpreters
+\item Machine learning
+\item Randomised and Probabilistic Computational Models
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+\begin{rSubsection}{EATON Corp.}{September 2012 - Present}{Software Developer}{Roztoky u Prahy, Czech Republic}
+\item Eaton Opensource Software Team member
+\item Network UPS Tools project (senior developer)
+\item Cross-platform programming (UNIX)
+\item Design and implementation of new features
+\item C/C++, Shell
+\item http://www.networkupstools.org/
+\item https://github.com/networkupstools/nut/tree/libconf
+\item https://github.com/networkupstools/nut/tree/Vaclav
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Acision}{February 2007 - August 2012}{Senior SW Engineer}{Praha 6, Czech Republic}
+\item Open Internet Proxy (OIP) project (highly customisable, high-performance TCP/UDP/IP proxy)
+\item User Web Services (UWS) project (Framework for creation of web-based applications)
+\item High Speed Proxy (HSP) project (descendant of WSB, see Logica CMG, below)
+\item Central Web Management System (CWMS) project (see Logica CMG, below)
+\item Technical solution analysis, design and implementation of system core components
+\item HTTP, RTSP, ICAP, TCP/IP, UDP/IP
+\item High performance (asynchronous) socket I/O
+\item C/C++, Perl, Shell, XML, JavaScript
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Logica CMG}{August 2005 - February 2007}{Senior SW Engineer}{Praha 6, Czech Republic}
+\item Wireless Service Broker (WSB) project (WAP 1 \& 2 gateway, SMS Push/Pull service)
+\item Central Web Management System (CWMS) project (Web-based management of server products)
+\item Development and maintenance, customisations
+\item C/C++, Shell
+\item In February 2007, Mobile Broadband Division of Logica CMG transformed into Acision
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{A \& L Soft, s.r.o.}{October 2003 - July 2005}{Programmer}{Praha 6, Czech Republic}
+\item Flex Compiler development (in-house developed Ada-like OO language, safe programming)
+\item Development of customisable internet-banking solution
+\item Flex (proprietary)
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL DEVELOPMENT SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Personal Projects}
+
+%------------------------------------------------
+
+\begin{rSubsection}{CTX Fryer}{2012 - Present}{Founder}{https://github.com/vencik/ctx-fryer}
+\item Efficient \& lightweight CFL parser generator (aka compiler compiler)
+\item In development (working prototype available)
+\item Grammar attribution support
+\item Not bound to any target language
+\item Accepts wide class of grammars (LALR(1))
+\item Supports various source supply methods (push/pull, incremental)
+\item C/C++, Perl, XSLT/XML, \LaTeX
+\item Free Software
+\item http://lopucha.net/ctx-fryer
+\item https://github.com/vencik/ctx-fryer/wiki
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Programming Languages & C/C++, Perl, XSLT/XML, AWK, Shell, JavaScript, \LaTeX \\
+Communication Protocols & RTSP, HTTP, SNMP, TCP/IP, UDP/IP \\
+Development Tools & Git, SVN, Trac, Vim, Wireshark, Valgrind, mutrace, autotools, \dots \\
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	OTHER INTERRESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Other interrests}
+
+\item Climbing
+\item Cycling
+\item Riding motorcycle
+\item Playing guitar, bass
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
