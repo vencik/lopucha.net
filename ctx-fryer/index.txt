@@ -2,7 +2,7 @@ CTX Fryer
 =========
 // Web page meta data.
 :keywords:    parser, generator, compiler, interpreter, XML, XSLT, regex, CFG, CFL, LALR(1)
-:description: CTX fryer project aim is to create (yet another) generator of context-freer +
+:description: CTX fryer project aim is to create (yet another) generator of context-free +
               languages (CFL) parsers. The label is a pun, implicating that the software    +
               should be as easily and highly usable and as sturdy as a titanium pan.
 
