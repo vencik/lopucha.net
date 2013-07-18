@@ -1,4 +1,4 @@
-subdirs = ctx-fryer vencik
+subdirs = vencik
 
 package_root = /var/tmp/lopucha.net
 ftp_journal  = /var/tmp/lopucha.net.ftp
