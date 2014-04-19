@@ -1,0 +1,121 @@
+Linux on Toshiba Portégé Z30-A-12N
+==================================
+
+:Author: Vaclav Krpec  <vencik@razdva.cz>
+:Date:   2014/03/26
+
+
+Overview
+--------
+
+IMO a very nice, light yet sturdy laptop with comfortable keyboard,
+matte display and impressive battery life time.
+Completely quiet most of the time, too.
+I haven't seen any better for coding while travelling so far
+(and that's the reason why I chose it).
+
+With just a few tweaks, runs Linux smoothly. :-)
+
+NOTE: It is very likely that the doc. is valid more generally to
+the whole Portégé Z30-A model line.
+No guarantees, though.
+
+
+Installation
+------------
+
+Installation of Debian Jessie went just fine.
+The machine is equipped with an SSD, so I advice against much
+partitioning; I've created just 2 partitions: boot partition
+and rootfs partition.
+I swap (if ever) to a file;
+see link:http://www.cyberciti.biz/faq/linux-add-a-swap-file-howto/[http://www.cyberciti.biz/faq/linux-add-a-swap-file-howto/]
+for instance.
+
+
+Power management
+----------------
+
+Suspend works out-of-the-box.
+However, making systemd PID 1 helps a bit with GNOME 3 integration,
+so you might want that; just add
+
+----
+init=/bin/systemd
+----
+
+kernel boot-line parameter
+to `GRUB_CMDLINE_LINUX_DEFAULT` variable in `/etc/default/grub` config. file.
+
+Note that I don't use suspend to disk (aka hibernation); the machine can
+quite easily live about 9 hours on battery, so suspend to RAM is usually
+more than enough.
+
+Display back-light control doesn't work after installation, however,
+adding
+
+----
+acpi_backlight=vendor
+----
+
+kernel boot-line parameter (same place as above) fixes that.
+
+Don't forget to update grub after making your changes:
+
+----
+# update-grub
+----
+
+
+WiFi & bluetooth
+----------------
+
+Install Intel WiFi firmware:
+
+----
+# apt-get install firmware-iwlwifi
+----
+
+`toshiba_bluetooth` kernel module is auto-loaded, but doesn't seem to be
+necessary.
+I've found it even counter-productive, since as soon as you disable
+bluetooth (e.g. with `rfkill`), it seems to attempt to re-load the Intel
+bluetooth firmware every few seconds (at least it certainly pollutes
+the kernel ring buffer with messages about it).
+
+Just blacklist the module; create /etc/modprobe.d/toshiba-blacklist.conf
+file containing
+
+----
+blacklist toshiba_bluetooth
+----
+
+and run
+
+----
+# depmod -ae
+----
+
+
+Touchpad & trackstick
+---------------------
+
+The machine is equipped with an ALPS touchpad and a trackstick.
+The input devices work out-of-the-box, but for now only in a kind of
+PS/2 mouse compatibility mode, meaning that no multi-touch
+is supported.
+
+However, at the time of writing, sub-driver for the`psmouse` kernel
+module providing support for the touchpad is in preparation
+(see link:http://www.spinics.net/lists/linux-input/[`linux-input`]
+mailing list archives for more info).
+If you use kernel 3.14 or later, you might already have the device
+supported fine.
+
+
+Fingerprint reader
+------------------
+
+I haven't focused on that yet, but
+link:http://www.freedesktop.org/wiki/Software/fprint/[`fprint`]
+project should be the answer.

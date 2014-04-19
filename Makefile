@@ -1,4 +1,6 @@
-subdirs = vencik
+subdirs = \
+	vencik \
+	Linux_on_Toshiba_Portege_Z30-A-12N
 
 package_root = /var/tmp/lopucha.net
 ftp_journal  = /var/tmp/lopucha.net.ftp
