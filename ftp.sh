@@ -164,5 +164,6 @@ fi
 (
     echo "quote USER $username"
     echo "quote PASS $passwd"
+    echo "binary"
     awk '{ print "!echo \"" $0 "\""; print $0 }' $batch
 ) | ftp -nip "$host"
