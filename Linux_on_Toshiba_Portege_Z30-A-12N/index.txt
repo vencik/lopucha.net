@@ -21,6 +21,18 @@ the whole Portégé Z30-A model line.
 No guarantees, though.
 
 
+Links
+~~~~~
+
+image:http://tuxmobil.org/pics/tuxmobil_sticker.png["TuxMobil - Linux on Laptops, Notebooks, PDAs and Mobile Phones",width="88",height="31",link="http://tuxmobil.org"]
+in
+link:http://tuxmobil.org/toshiba.html[Toshiba section]
+of the
+link:http://tuxmobil.org/mylaptops.html[Linux Laptop & Notebook Installation Guides].
+
+link:https://github.com/he1per/psmouse-dkms-alpsv7[Out-of-tree ALPSv7-ready psmouse subdriver for the device touchpad.]
+
+
 Installation
 ------------
 
@@ -111,6 +123,9 @@ module providing support for the touchpad is in preparation
 mailing list archives for more info).
 If you use kernel 3.14 or later, you might already have the device
 supported fine.
+
+Meanwhile, you might want to take a look at
+link:https://github.com/he1per/psmouse-dkms-alpsv7[https://github.com/he1per/psmouse-dkms-alpsv7].
 
 
 Fingerprint reader
