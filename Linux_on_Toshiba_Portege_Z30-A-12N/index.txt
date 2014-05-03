@@ -79,6 +79,17 @@ Don't forget to update grub after making your changes:
 ----
 
 
+ACPI
+~~~~
+
+`toshiba_acpi` kernel module is responsible for support for several
+platform-specific features.
+At time of writing, e.g. keyboard backlight control (via Fn-Z) doesn't
+work, but that's true for my current kernel 3.13.
+Checking the next stable kernel (3.14.2), it seems that support for
+the keyboard backlight was already added.
+
+
 WiFi & bluetooth
 ----------------
 
