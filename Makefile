@@ -4,7 +4,8 @@ subdirs = \
 
 package_root = /var/tmp/lopucha.net
 ftp_journal  = /var/tmp/lopucha.net.ftp
-ftp_host     = ftp.freehostia.com
+ftp_host     = lopucha.net
+ftp_username = vackrp
 
 
 all: index.txt
@@ -33,5 +34,5 @@ install: all
 	    $(MAKE) -C $$d install; \
 	done
 	echo 'bye' >> $(ftp_journal)
-	./ftp.sh --host $(ftp_host) $(ftp_journal)
+	./ftp.sh --host $(ftp_host) --user $(ftp_username) $(ftp_journal)
 	rm -rf $(package_root) $(ftp_journal)
